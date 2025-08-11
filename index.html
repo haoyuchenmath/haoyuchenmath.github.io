@@ -6,21 +6,60 @@
     h1 {
       margin-bottom: 0;
     }
-   .photo {
-      float: right;
+    .container {
+      max-width: 800px;       /* limits width */
+      margin: 40px auto;      /* centers container */
+      padding: 0 20px;        /* horizontal padding */
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1 {
+      margin-bottom: 0;
+    }
+   /* Float photo left so text flows nicely */
+    .photo {
+      float: left;
       width: 200px;
-      margin-left: 20px;
+      margin: 0 20px 15px 0;  /* space on right and bottom */
       border-radius: 8px;
+      shape-outside: circle(50%); /* optional: make text wrap in circle shape */
+      -webkit-shape-outside: circle(50%);
     }
     a {
       color: #0645AD;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
+    .navbar {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      padding: 0 20px;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .navbar a {
+      margin-left: 15px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .navbar a.active {
+      color: #4CAF50;
+      text-decoration: underline;
+    }
+
+    .navbar a:hover {
+      color: #0645AD;
+    }
     .section {
       margin-top: 40px;
+      clear: both;  /* clear float */
     }
   </style>
   <title>About Me</title>
