@@ -14,14 +14,15 @@
     h1 {
       margin-bottom: 0;
     }
-   /* Float photo left so text flows nicely */
     .photo {
-      float: left;
-      width: 180px;
-      margin: 0 20px 15px 0;  /* space on right and bottom */
-      border-radius: 8px;
-      shape-outside: circle(50%); /* optional: make text wrap in circle shape */
-      -webkit-shape-outside: circle(50%);
+    float: left;
+    width: 200px;            /* keep large */
+    height: 200px;           /* fix height for consistent shape */
+    margin: 0 20px 20px 0;   /* right + bottom margin */
+    border-radius: 50%;      /* circular photo */
+    shape-outside: circle(50%);
+    -webkit-shape-outside: circle(50%);
+    object-fit: cover;       /* make sure image fits nicely */
     }
     a {
       color: #0645AD;
