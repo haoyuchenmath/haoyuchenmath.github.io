@@ -34,7 +34,7 @@ body {
 }
 
 .container h1 {
-    color: blue; /* Makes section titles blue */
+    color: #00aaff; /* Makes section titles blue */
     margin-top: 20px;
     margin-bottom: 10px;
 }
