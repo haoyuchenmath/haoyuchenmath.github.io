@@ -1,102 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <style>
-    .container {
-      max-width: 800px;       /* limits width */
-      margin: 40px auto;      /* centers container */
-      padding: 0 20px;        /* horizontal padding */
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-    h1 {
-      margin-bottom: 0;
-    }
-    .photo {
-    float: left;
-    width: 250px;            /* keep large */
-    height: 350px;           /* fix height for consistent shape */
-    margin: 0 20px 20px 0;   /* right + bottom margin */
-    /* border-radius: 50%;  */    /* circular photo */
-    /* shape-outside: circle(50%); */
-    /* -webkit-shape-outside: circle(50%); */
-    object-fit: cover;       /* make sure image fits nicely */
-    }
-    a {
-      color: #0645AD;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .navbar {
-      /*max-width: 800px; */
-      margin: 0 auto 20px auto;
-      padding: 0 20px;
-      text-align: right;
-      font-weight: bold;
-    }
-
-    .navbar a {
-      margin-left: 15px;
-      color: #333;
-      text-decoration: none;
-    }
-
-    .navbar a.active {
-      color: #4CAF50;
-      text-decoration: underline;
-    }
-
-    .navbar a:hover {
-      color: #0645AD;
-    }
-    .section {
-      margin-top: 40px;
-      clear: both;  /* clear float */
-    }
-  </style>
-  <title>About Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Haoyu Chen, Ph.D. student in Mathematics at the University of Utah.">
+  <title>Haoyu Chen | About</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="navbar">
-    <a href="index.html">About</a>
-    <a href="research.html">Research</a>
-    <a href="teaching.html">Teaching</a>
-  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-name" href="index.html">Haoyu Chen</a>
+      <nav class="navbar" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">About</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="container">
-    <h1>Haoyu Chen</h1>
-    <p><img src="myphoto.JPG" alt="My photo" class="photo" />
-    Department of Mathematics, University of Utah <br> Email: Haoyu.Chen@utah.edu <br>
-    [<a href="cv.pdf">CV</a>]
-    [<a href="https://scholar.google.com/">Google Scholar</a>]
-    [<a href="https://github.com/yourusername">GitHub</a>] </p>
+  <main class="container">
+    <section class="profile" aria-labelledby="name">
+      <img src="myphoto.JPG" alt="Portrait of Haoyu Chen" class="photo" width="250" height="340">
+      <div>
+        <p class="eyebrow">About</p>
+        <h1 id="name">Haoyu Chen</h1>
+        <p class="affiliation">Department of Mathematics<br>University of Utah</p>
+        <p class="contact">Email: <a href="mailto:Haoyu.Chen@utah.edu">Haoyu.Chen@utah.edu</a></p>
+        <div class="quick-links" aria-label="Profile links">
+          <a href="cv.pdf">CV</a>
+          <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
 
-    <p>I am a Ph.D. student in the Department of Mathematics, the University of Utah. Previously, I obtained my M.S. 
-    and B.A. in Statistics from University of Minnesota in 2021 and from UC Berkeley in 2019. I am a U.S. citizen. </p>  
-
-    <p>My research focuses on geometry and manifold learning, with an emphasis on developing interpretable geometric models 
-      and distance metrics grounded in rigorous theory and supported by efficient algorithms. I leverage geometric perspectives 
-      to provide novel insights, enhance model performance, and design methods that are both mathematically principled 
-      and computationally practical.
-  </div>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const currentPage = window.location.pathname.split("/").pop();
-      document.querySelectorAll(".navbar a").forEach(link => {
-        const linkPage = link.getAttribute("href");
-        if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
-          link.classList.add("active");
-        }
-      });
-    });
-  </script>
+    <section class="bio" aria-label="Biography and research interests">
+      <p>I am a Ph.D. student in the Department of Mathematics at the University of Utah. Previously, I obtained my M.S. in Statistics from the University of Minnesota in 2021 and my B.A. in Statistics from UC Berkeley in 2019. I am a U.S. citizen.</p>
+      <p>My research focuses on geometry and manifold learning. I develop interpretable geometric models and distance metrics grounded in rigorous theory and supported by efficient algorithms. I use geometric perspectives to gain insight, improve model performance, and design methods that are mathematically principled and computationally practical.</p>
+    </section>
+  </main>
 </body>
 </html>
