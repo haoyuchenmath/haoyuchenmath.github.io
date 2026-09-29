@@ -1,66 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Haoyu Chen | Teaching</title>
+  <style>
+    h1 {
+      margin-bottom: 0;
+    }
+    a {
+      color: #0645AD;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .navbar {
+      /*max-width: 800px; */
+      margin: 0 auto 20px auto;
+      padding: 0 20px;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .navbar a {
+      margin-left: 15px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .navbar a.active {
+      color: #4CAF50;
+      text-decoration: underline;
+    }
+
+    .navbar a:hover {
+      color: #0645AD;
+    }
+ </style>
+  <title>Teaching</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="site-name" href="index.html">Haoyu Chen</a>
-      <nav class="navbar" aria-label="Main navigation">
-        <a href="index.html">About</a>
-        <a href="research.html">Research</a>
-        <a href="teaching.html" aria-current="page">Teaching</a>
-      </nav>
-    </div>
-  </header>
+  <div class="navbar">
+    <a href="index.html">About</a>
+    <a href="research.html">Research</a>
+    <a href="teaching.html">Teaching</a>
+  </div>
 
-  <main class="container">
-    <div class="page-heading">
-      <p class="eyebrow">Teaching</p>
-      <h1>Teaching</h1>
-    </div>
+  <div class="container">
+    <h1>University of Utah</h1>
+    <h2>Instructor</h2>
+    <ul>
+      <li>Fall 26: MATH 1090 Introduction to Statistical Inference</li>
+      <li>Spring 26: MATH 1090 Introduction to Statistical Inference</li>
+     <li>Spring 25: MATH 1090 Business Algebra
+       (<a href="files/math1090_spring25_evaluation.pdf" target="_blank" rel="noopener noreferrer">Course Evaluation</a>)
+     </li>
+      <li>Fall 24:   MATH 2250 Differential Equation & Linear Algebra</li>
+    </ul>
+    <h2>Teaching Assistant</h2>
+    <ul>
+      <li>Spring 22: MATH 4100 Introduction to Data Science</li>
+      <li>Fall 21:   MATH 2250 Differential Equation & Linear Algebra</li>
+    </ul>
+    <h2>Qualifying Exam Class Grader</h2>
+    <ul>
+      <li>Fall 23:   MATH 6010 Linear Model</li>
+      <li>Spring 23: MATH 6620 Numerical Analysis II</li>
+    </ul>
 
-    <section class="institution" aria-labelledby="utah">
-      <h2 class="section-title" id="utah">University of Utah</h2>
-      <div class="role">
-        <h3>Instructor</h3>
-        <ul class="course-list">
-          <li><span class="term">Fall 2026</span><span class="course-name">MATH 1090 · Introduction to Statistical Inference</span></li>
-          <li><span class="term">Spring 2026</span><span class="course-name">MATH 1090 · Introduction to Statistical Inference</span></li>
-          <li><span class="term">Spring 2025</span><span class="course-name">MATH 1090 · Business Algebra</span><a class="resource-link" href="files/math1090_spring25_evaluation.pdf" target="_blank" rel="noopener noreferrer">Course Evaluation (PDF)</a></li>
-          <li><span class="term">Fall 2024</span><span class="course-name">MATH 2250 · Differential Equation &amp; Linear Algebra</span></li>
-        </ul>
-      </div>
-      <div class="role">
-        <h3>Teaching Assistant</h3>
-        <ul class="course-list">
-          <li><span class="term">Spring 2022</span><span class="course-name">MATH 4100 · Introduction to Data Science</span></li>
-          <li><span class="term">Fall 2021</span><span class="course-name">MATH 2250 · Differential Equation &amp; Linear Algebra</span></li>
-        </ul>
-      </div>
-      <div class="role">
-        <h3>Qualifying Exam Class Grader</h3>
-        <ul class="course-list">
-          <li><span class="term">Fall 2023</span><span class="course-name">MATH 6010 · Linear Model</span></li>
-          <li><span class="term">Spring 2023</span><span class="course-name">MATH 6620 · Numerical Analysis II</span></li>
-        </ul>
-      </div>
-    </section>
+    <h1>University of Minnesota</h1>
+    <h2>Teaching Assistant</h2>
+    <ul>
+      <li>Spring 21: STAT 5401 Applied Multivariate Methods</li>
+      <li>Fall 20:   STAT 5101 Theory of Statistics</li>
+    </ul>
+  </div>
 
-    <section class="institution" aria-labelledby="minnesota">
-      <h2 class="section-title" id="minnesota">University of Minnesota</h2>
-      <div class="role">
-        <h3>Teaching Assistant</h3>
-        <ul class="course-list">
-          <li><span class="term">Spring 2021</span><span class="course-name">STAT 5401 · Applied Multivariate Methods</span></li>
-          <li><span class="term">Fall 2020</span><span class="course-name">STAT 5101 · Theory of Statistics</span></li>
-        </ul>
-      </div>
-    </section>
-  </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const currentPage = window.location.pathname.split("/").pop();
+      document.querySelectorAll(".navbar a").forEach(link => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
